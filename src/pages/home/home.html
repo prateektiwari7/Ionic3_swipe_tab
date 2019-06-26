@@ -7,13 +7,13 @@
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="category">
-      <ion-segment-button value="movies">
+      <ion-segment-button value="colorone">
         Color One
       </ion-segment-button>
-      <ion-segment-button value="tvshows">
+      <ion-segment-button value="colortwo">
         Color Two
       </ion-segment-button>
-      <ion-segment-button value="animated">
+      <ion-segment-button value="colorthree">
         Color Three
       </ion-segment-button>
     </ion-segment>
@@ -22,19 +22,19 @@
 
 <ion-content>
   <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
-    <ion-list *ngSwitchCase="'movies'" >
+    <ion-list *ngSwitchCase="'colorone'" >
       <ion-item class="colorone">
         Swipe Right on screen
       </ion-item>
       </ion-list>
 
-    <ion-list *ngSwitchCase="'tvshows'">
+    <ion-list *ngSwitchCase="'colortwo'">
       <ion-item class= "colortwo">
         Swipe left or right to view magic
       </ion-item>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'animated'">
+    <ion-list *ngSwitchCase="'colorthree'">
       <ion-item class="colorthree">
         Swipe left on screen
       </ion-item>

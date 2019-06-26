@@ -6,8 +6,8 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public category: string = 'movies';
-  public categories: Array<string> = ['movies', 'tvshows', 'animated']
+  public category: string = 'colorone';
+  public categories: Array<string> = ['colorone', 'colortwo', 'colorthree']
 
   constructor(public navCtrl: NavController) { }
 
