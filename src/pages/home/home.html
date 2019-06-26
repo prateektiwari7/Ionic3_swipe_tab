@@ -8,13 +8,13 @@
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="category">
       <ion-segment-button value="movies">
-        Movies
+        Color One
       </ion-segment-button>
       <ion-segment-button value="tvshows">
-        Tv Shows
+        Color Two
       </ion-segment-button>
       <ion-segment-button value="animated">
-        Animated
+        Color Three
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -22,40 +22,22 @@
 
 <ion-content>
   <div [ngSwitch]="category" swipeSegment [tabsList]="categories" [(currentTab)]="category" (tabChanged)="onTabChanged($event)" class="swipe-area">
-    <ion-list *ngSwitchCase="'movies'">
-      <ion-item>
-        Batman Begins
+    <ion-list *ngSwitchCase="'movies'" >
+      <ion-item class="colorone">
+        Swipe Right on screen
       </ion-item>
-      <ion-item>
-        Transporter
-      </ion-item>
-      <ion-item>
-        Million Dollar Baby
-      </ion-item>
-    </ion-list>
+      </ion-list>
 
     <ion-list *ngSwitchCase="'tvshows'">
-      <ion-item>
-        Game of Thrones
-      </ion-item>
-      <ion-item>
-        Daredevil
-      </ion-item>
-      <ion-item>
-        Arrow
+      <ion-item class= "colortwo">
+        Swipe left or right to view magic
       </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'animated'">
-      <ion-item>
-        Ice Age
+      <ion-item class="colorthree">
+        Swipe left on screen
       </ion-item>
-      <ion-item>
-        Lion King
-      </ion-item>
-      <ion-item>
-        Up
-      </ion-item>
-    </ion-list>
+     </ion-list>
   </div>
 </ion-content>
